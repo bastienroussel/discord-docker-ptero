@@ -28,7 +28,7 @@ RUN apt -y install default-jdk
     # Python
 RUN apt -y install python3.8 python3.8-dev python3.8-venv python3-pip git default-jre-headless \
     && build-essential \
-    && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash \
+    && curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash - \
     && CONFIGURE_OPTS=--enable-optimizations pyenv install 3.8.1 -v \
     && pyenv global 3.8.1
 
